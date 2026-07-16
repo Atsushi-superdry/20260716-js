@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    color: #333;
+    background: linear-gradient(135deg,#edf4fa,#dcecf7);
+}
+
+header h1{
+    margin: 0;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg,#2f353e,#4b596b);
+    font-size: 3rem;
+    letter-spacing: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+
+main{
+    width: min(1050px,90%);
+    margin: 60px auto;
+}
+
+main ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+}
+
+main li{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    width: 300px;
+
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+
+    transition:
+        transform .3s,
+        box-shadow .3s;
+}
+
+main li:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.25);
+}
+
+main img{
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform .4s;
+}
+
+main li:hover img{
+    transform: scale(1.08);
+}
+
+main div{
+    position: absolute;
+    inset: 0;
+
+    display: none;
+
+    padding: 24px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.75),
+            rgba(0,0,0,.25)
+        );
+
+    color: white;
+}
+
+main p{
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+
+    margin: 0;
+
+    line-height: 1.7;
+    font-size: .95rem;
+    text-shadow: 0 2px 5px rgba(0,0,0,.4);
+}
+
+
+
+/* スマホ用にサイズ条件による参照元を追加してみました */
+@media (max-width:768px){
+
+    header h1{
+        font-size:2.2rem;
+    }
+
+    main{
+        width:92%;
+    }
+
+    main li{
+        width:100%;
+    }
+
+}
